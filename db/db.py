@@ -28,3 +28,10 @@ if choose == '1':
     product_price = input(int('Enter product price: '))
     cursor.execute('''INSERT INTO products (product_name, product_category, product_price) VALUES (?, ?, ?)''', (product_name, product_category, product_price))
     con.commit()
+
+if choose == '2':
+    first_name = input('Enter first name: ')
+    last_name = input('Enter last name: ')
+    email = input('Enter email: ')
+    cursor.execute('''INSERT INTO customers (first_name, last_name, email) VALUES (?, ?, ?)''', (first_name, last_name, email))
+    con.commit()
