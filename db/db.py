@@ -56,4 +56,9 @@ if choose == '3':
 
     con.commit()
 
+if choose == '4':
+    cursor.execute('''SELECT SUM(price * quantity) AS total_sales
+    FROM orders; ''')
+
+
 
